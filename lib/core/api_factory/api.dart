@@ -133,8 +133,8 @@ class Api {
   }
 }
 
-abstract class APIResponse {
-  onResponse(String apiKey, dynamic response);
+mixin class APIResponse {
+  onResponse(String apiKey, dynamic response) {}
 
-  onError(String apiKey, String error);
+  onError(String apiKey, String error) {}
 }
