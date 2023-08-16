@@ -1,5 +1,9 @@
 import 'package:flutter/material.dart';
 
+///**********************************************///
+///---------------- Build Context ---------------///
+///**********************************************///
+
 extension ExtensionOnBuildContext on BuildContext {
   hideKeyboard() => FocusScope.of(this).unfocus();
 
@@ -18,9 +22,17 @@ extension ExtensionOnBuildContext on BuildContext {
   TextStyle? get buttonTextStyle => Theme.of(this).textTheme.displayMedium;
 }
 
+///**********************************************///
+///-------------------- List --------------------///
+///**********************************************///
+
 extension ExtensionOnList on List {
   List get unique => toSet().toList();
 }
+
+///**********************************************///
+///-------------------- String ------------------///
+///**********************************************///
 
 extension ExtensionOnString on String {
   String toCapitalized() => length > 0
@@ -34,6 +46,10 @@ extension ExtensionOnString on String {
 
   String get firstLatter => this[0];
 }
+
+///**********************************************///
+///---------------------- Int -------------------///
+///**********************************************///
 
 extension ExtensionOnInt on int {
   bool isEvenNumber() => this % 2 == 0;
