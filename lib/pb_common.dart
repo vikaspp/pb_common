@@ -21,3 +21,6 @@ export 'package:permission_handler/permission_handler.dart';
 
 //Email, Password Validator
 export 'common/utils.dart';
+
+//Widgets
+export 'widgets/pb_material_app.dart';
