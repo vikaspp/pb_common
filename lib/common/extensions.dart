@@ -50,3 +50,24 @@ extension ExtensionOnInt on int {
   bool isEvenNumber() => this % 2 == 0;
   bool isOddNumber() => this % 2 != 0;
 }
+
+///**********************************************///
+///-------------------- Dynamic -----------------///
+///**********************************************///
+
+extension ExtensionOnDynamic on dynamic {
+  bool get isNullOrEmpty {
+    if (this == null) {
+      return true;
+    } else if (runtimeType == String) {
+      if (this == "") {
+        return true;
+      }
+    } else if (runtimeType == List) {
+      if (this.isEmpty) {
+        return true;
+      }
+    }
+    return false;
+  }
+}
