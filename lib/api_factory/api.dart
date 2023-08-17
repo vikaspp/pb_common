@@ -2,6 +2,7 @@ import 'dart:io';
 
 import 'package:dio/dio.dart';
 import 'package:dio/dio.dart' as dio;
+import 'package:pb_common/log/pb_log.dart';
 import 'dio_factory.dart';
 
 enum HttpMethod { delete, get, patch, post, put }
@@ -107,7 +108,7 @@ class Api {
       }
 
       if (response.statusCode == 401) {
-        print('Success Error');
+        PBLog('Success Error');
       } else {
         res.onResponse(key, response.data);
         // onResponse!(response.data);
@@ -128,7 +129,7 @@ class Api {
       } else {
         errorMessage = "Something went wrong! Please try again.";
       }
-      print('errorMessage : $e');
+      PBLog('errorMessage : $e');
     }
   }
 }
